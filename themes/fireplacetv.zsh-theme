@@ -1,4 +1,4 @@
-# oh-my-zsh Bureau Theme
+# custom fireplacetv oh-my-zsh theme 
 
 ### NVM
 
@@ -126,3 +126,10 @@ PROMPT='$_LIBERTY '
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd bureau_precmd
+
+# ALIASES
+## git
+alias glog='git log -n 12 --oneline'
+
+## jupyter
+alias jl='jupyter lab'
