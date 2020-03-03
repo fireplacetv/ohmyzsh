@@ -1,4 +1,4 @@
-# custom fireplacetv oh-my-zsh theme 
+# custom fireplacetv oh-my-zsh theme
 
 ### NVM
 
@@ -7,8 +7,8 @@ ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
 ### Git [±master ▾●]
 
-ZSH_THEME_GIT_PROMPT_PREFIX="[%{$fg_bold[green]%}±%{$reset_color%}%{$fg_bold[white]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[214]%}[%{$fg_bold[green]%}±%{$reset_color%}%{$fg[white]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$FG[214]%}]%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✓%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[cyan]%}▴%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[magenta]%}▾%{$reset_color%}"
@@ -84,10 +84,10 @@ if [[ $EUID -eq 0 ]]; then
   _USERNAME="%{$fg_bold[red]%}%n"
   _LIBERTY="%{$fg[red]%}#"
 else
-  _USERNAME="%{$fg_bold[white]%}%n"
-  _LIBERTY="%{$fg[green]%}$"
+  _USERNAME="%{$FG[208]%}%n"
+  _LIBERTY="%{$FG[214]%}$"
 fi
-_USERNAME="$_USERNAME%{$reset_color%}@%m"
+_USERNAME="$_USERNAME%{$FG[214]%}@%m%{$reset_color%}"
 _LIBERTY="$_LIBERTY%{$reset_color%}"
 
 
@@ -122,6 +122,8 @@ bureau_precmd () {
 
 setopt prompt_subst
 PROMPT='$_LIBERTY '
+
+# right side prompt from original theme. this is distracting.
 # RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
