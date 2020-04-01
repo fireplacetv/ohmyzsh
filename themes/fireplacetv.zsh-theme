@@ -132,6 +132,7 @@ add-zsh-hook precmd bureau_precmd
 # ALIASES
 ## git
 alias glog='git log -n 12 --oneline'
+alias github="git remote -v | grep push | grep -Eo 'github.com:.*\s' | sed 's/:/\//g; s/^/https\:\/\//g;' | xargs open"
 
 ## jupyter
 alias jl='jupyter lab'
