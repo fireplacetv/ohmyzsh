@@ -1,5 +1,5 @@
 # custom fireplacetv oh-my-zsh theme
-
+echo Loading fireplacetv oh-my-zsh theme...
 ### NVM
 
 ZSH_THEME_NVM_PROMPT_PREFIX="%B⬡%b "
@@ -133,7 +133,7 @@ add-zsh-hook precmd bureau_precmd
 ## git
 alias glog='git log -n 12 --oneline'
 alias github="git remote -v | grep push | grep -Eo 'github.com:.*\s' | sed 's/:/\//g; s/^/https\:\/\//g;' | xargs open"
-alias pr="open https://github.com/$(git remote -v | head -n 1 | cut -d: -f2 | cut -d' ' -f1)/pull/new/$(echo $(git status | head -n 1 | cut -d' ' -f3))"
+# alias pr="open https://github.com/$(git remote -v | head -n 1 | cut -d: -f2 | cut -d' ' -f1)/pull/new/$(echo $(git status | head -n 1 | cut -d' ' -f3))"
 
 ## jupyter
 alias jl='jupyter lab'
