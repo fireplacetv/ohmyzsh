@@ -131,7 +131,7 @@ add-zsh-hook precmd bureau_precmd
 
 # ALIASES
 ## git
-alias glog='git log -n 12 --oneline'
+alias glog='git log -n 12 --format="%C(yellow)%h %C(auto)%d %s %C(green)%an %C(yellow)%ar"'
 alias github="git remote -v | grep push | grep -Eo 'github.com:.*\s' | sed 's/:/\//g; s/^/https\:\/\//g;' | xargs open"
 # alias pr="open https://github.com/$(git remote -v | head -n 1 | cut -d: -f2 | cut -d' ' -f1)/pull/new/$(echo $(git status | head -n 1 | cut -d' ' -f3))"
 
